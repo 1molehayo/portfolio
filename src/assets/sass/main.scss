@@ -1,32 +1,45 @@
 /* Portfolio
-   - Version:  1.0
+   - Version:  0.2.0
    - Author:   @onemole
 */
 
-// helpers
-@import "helpers/reset";
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/typography";
-@import "helpers/utils";
+// global
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/mixins';
+
+// base
+@import 'base/resets';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+
+// vendors
+@import 'vendors/bootstrap';
 
 // components
-@import "components/button";
-@import "components/loader";
-@import "components/modal";
-@import "components/nav";
-@import "components/project";
+@import 'components/badge';
+@import 'components/button';
+@import 'components/loader';
+@import 'components/modal';
+@import 'components/nav';
+@import 'components/project';
 
-// sections
-@import "sections/footer";
-@import "sections/header";
+// layout
+@import 'layouts/footer';
+@import 'layouts/header';
+@import 'layouts/page';
+@import 'layouts/section';
 
 // pages
-@import "pages/about";
-@import "pages/home";
-@import "pages/works";
+@import 'pages/about';
+@import 'pages/home';
+@import 'pages/works';
+@import 'pages/page';
 
-// layouts
-@import "layouts/base";
-@import "layouts/responsive";
+// themes
+@import 'themes/default';
+@import 'themes/dark-mode';
+
+// helpers
+@import 'helpers/utility';

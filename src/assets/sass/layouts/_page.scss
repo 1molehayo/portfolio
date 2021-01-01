@@ -1,0 +1,72 @@
+.page {
+  background: color(primary);
+  color: color(white);
+  transition: background-color 0.25s;
+
+  &__light {
+    background: color(light);
+    color: color(primary);
+
+    .button-icon i {
+      color: color(primary);
+    }
+
+    .button__secondary {
+      color: color(white);
+
+      .button-icon i {
+        color: color(white);
+      }
+    }
+
+    .navigation {
+      .nav {
+        &-link {
+          color: color(primary) !important;
+        }
+
+        &bar {
+          &-toggler {
+            color: color(primary) !important;
+          }
+        }
+      }
+    }
+
+    .heading-line {
+      border-top-color: color(primary);
+    }
+
+    .footer {
+      border-top: solid 1px color(light);
+    }
+
+    .project {
+      background-color: color(primary);
+
+      .text-block {
+        color: color(white);
+      }
+
+      &-description {
+        color: rgba(color(white), 0.8);
+      }
+    }
+  }
+}
+
+.mobile-app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  &-button {
+    @include font-weight(medium);
+    @include font-weight(medium);
+
+    i {
+      margin-left: 5px;
+    }
+  }
+}

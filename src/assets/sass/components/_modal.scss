@@ -1,8 +1,5 @@
 .modal {
   &-dialog {
-    max-width: 80%;
-    height: 80%;
-
     @include respond(large) {
       height: auto;
     }
@@ -14,11 +11,16 @@
     @include respond(small) {
       max-width: 100%;
     }
+
+    max-width: 80%;
+    height: 80%;
   }
+
   &-content {
-    height: 100%;
     border-radius: 0;
+    height: 100%;
   }
+
   &-body {
     padding: 0;
   }

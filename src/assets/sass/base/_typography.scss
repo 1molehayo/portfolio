@@ -1,0 +1,38 @@
+.heading {
+  display: flex;
+  align-items: center;
+
+  &-line {
+    @include respond(smaller) {
+      margin-right: 1.5rem;
+      width: 50px;
+    }
+
+    margin-right: 2.4rem;
+    border-top-color: color(white);
+    width: 130px;
+  }
+
+  &-text {
+    @include respond(smaller) {
+      @include font-size(small);
+    }
+
+    @include font-size(large);
+    @include font-weight(medium);
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0;
+    letter-spacing: 2.5px;
+  }
+}
+
+.paragraph {
+  @include respond(small) {
+    @include font-size(small);
+  }
+
+  @include font-size(regular);
+  @include font-weight(regular);
+  line-height: 30px;
+}
