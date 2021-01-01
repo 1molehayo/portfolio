@@ -1,0 +1,26 @@
+.badge {
+  @include font-weight(medium);
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding: 0.25em 0.4em;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &--pill {
+    border-radius: 10rem;
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+  }
+}
+
+@each $name, $color in $colors {
+  .badge-#{$name} {
+    background: rgba($color: $color, $alpha: 0.1);
+    color: $color;
+  }
+}

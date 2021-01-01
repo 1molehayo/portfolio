@@ -1,0 +1,33 @@
+$colors: (
+  black: #000,
+  light: rgba(2, 29, 68, 0.1),
+  lighter: rgba(255, 255, 255, 0.1),
+  light-blue: #235aa6,
+  orange: #f6871f,
+  primary: #021d44,
+  red: #ff3e55,
+  white: #fff
+);
+
+$font-families: (
+  ubuntu: 'Ubuntu',
+  playfair: 'PlayfairDisplay'
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700
+);
+
+$font-sizes: (
+  xx-small: 9px,
+  x-small: 12px,
+  small: 14px,
+  regular: 18px,
+  medium: 20px,
+  large: 30px,
+  x-large: 35px
+);

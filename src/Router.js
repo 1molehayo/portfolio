@@ -1,59 +1,56 @@
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
-import Loading from "./components/Loader";
-import Works from "pages/Works";
+import React, { lazy, Suspense } from 'react';
+import { Router, Route, Switch, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Loader } from './components';
+import history from './history';
 
-const Home = lazy(() => import("pages/Home"));
+const Home = lazy(() => import('pages/Home'));
+const Works = lazy(() => import('pages/Works'));
 
-class Scroll extends React.Component {
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
-    }
-  }
+const Scroll = props => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [props.location]);
 
-  render() {
-    return this.props.children;
-  }
-}
+  return props.children;
+};
 
 Scroll.propTypes = {
   location: PropTypes.object,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 
 const ScrollToTop = withRouter(Scroll);
 
-class RouterComponent extends React.Component {
-  render() {
-    return (
-      <Router>
-        <ScrollToTop>
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={props => (
-                <Suspense fallback={<Loading show />}>
-                  <Home {...props} />
-                </Suspense>
-              )}
-            />
-            <Route
-              exact
-              path="/works"
-              render={props => (
-                <Suspense fallback={<Loading show />}>
-                  <Works {...props} />
-                </Suspense>
-              )}
-            />
-          </Switch>
-        </ScrollToTop>
-      </Router>
-    );
-  }
-}
+const RouterComponent = () => (
+  <Router history={history}>
+    <ScrollToTop>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={routeProps => (
+            <Suspense fallback={<Loader show />}>
+              <Home {...routeProps} />
+            </Suspense>
+          )}
+        />
+
+        <Route
+          exact
+          path="/works"
+          render={routeProps => (
+            <Suspense fallback={<Loader show />}>
+              <Works {...routeProps} />
+            </Suspense>
+          )}
+        />
+      </Switch>
+    </ScrollToTop>
+  </Router>
+);
 
 export default RouterComponent;
