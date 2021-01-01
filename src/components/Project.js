@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { isEmpty } from 'utility';
 import { isIOS, isMobile } from 'react-device-detect';
+import { isEmpty } from '../utility';
 import project1 from '../assets/img/project1.png';
 
 export const Project = ({ project, index }) => {
