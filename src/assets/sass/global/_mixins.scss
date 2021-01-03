@@ -27,7 +27,7 @@
     } // 600px
   }
   @if ($breakpoint == medium) {
-    @media only screen and (max-width: 48em) {
+    @media only screen and (max-width: 47.9em) {
       @content;
     } // 768px
   }

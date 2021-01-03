@@ -26,9 +26,15 @@
         }
 
         &bar {
-          &-toggler {
-            color: color(primary) !important;
+          &-toggler span {
+            background-color: color(primary) !important;
           }
+        }
+      }
+
+      .navbar-collapse {
+        @include respond(medium) {
+          background-color: color(white) !important;
         }
       }
     }
