@@ -28,7 +28,7 @@ export const About = ({ showModal, modalFunc, className }) => {
 
           <p className="paragraph">
             I build websites, develop web and mobile applications and I do
-            design, for over 3 years.
+            design, for over 6 years.
           </p>
 
           <p className="paragraph">

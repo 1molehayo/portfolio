@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import avatar from 'assets/img/myAvatar.png';
+import useEventListener from 'services/useEventListener';
 
 export const Navigation = ({ activeLink, toggleModal, toggleThemeSwitch }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const updateWindowDimensions = () => {
+    setIsMobile(window.innerWidth <= 990);
+  };
+
+  useEventListener('resize', updateWindowDimensions);
+
+  useEffect(() => {
+    updateWindowDimensions();
+  }, []);
 
   const toggleNav = () => {
     setIsOpen(prevState => !prevState);
@@ -37,6 +49,14 @@ export const Navigation = ({ activeLink, toggleModal, toggleThemeSwitch }) => {
 
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ml-auto">
+            {isMobile && (
+              <NavItem>
+                <span className="nav-link" onClick={toggleModal}>
+                  Home
+                </span>
+              </NavItem>
+            )}
+
             <NavItem>
               <span className="nav-link" onClick={toggleModal}>
                 About
