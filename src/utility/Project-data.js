@@ -3,7 +3,7 @@ import aiico from 'assets/img//works/aiico.jpg';
 import spectranet from 'assets/img//works/spectranet.jpg';
 import ebonylife from 'assets/img//works/ebonylife.jpg';
 import osp from 'assets/img//works/osp.jpg';
-// import ekitiwater from 'assets/img//works/ekitiwater.jpg';
+import ekitiwater from 'assets/img//works/ekitiwater.jpg';
 import hmb from 'assets/img//works/hmb.jpg';
 import artisanbutchery from 'assets/img//works/artisanbutchery.jpg';
 import summitech from 'assets/img//works/summitech.jpg';
@@ -74,19 +74,19 @@ const projectData = [
     altUrl:
       'https://itunes.apple.com/us/app/offshore-safety-permit/id1441544052?mt=8'
   },
-  //   {
-  //     id: 6,
-  //     name: 'Ekiti State Water Corporation',
-  //     category: ['Mobile app'],
-  //     stack: ['React native', 'Redux'],
-  //     description:
-  //       'The mobile application counterpart of the user management dashboard for customer support, profile management and bills payment.',
-  //     image: ekitiwater,
-  //     imageAlt: 'stabintel',
-  //     url:
-  //       'https://play.google.com/store/apps/details?id=com.ekitiwatercorporation',
-  //     altUrl: ''
-  //   },
+  {
+    id: 6,
+    name: 'Ekiti State Water Corporation',
+    category: ['Mobile app'],
+    stack: ['React native', 'Redux'],
+    description:
+      'The mobile application counterpart of the user management dashboard for customer support, profile management and bills payment.',
+    image: ekitiwater,
+    imageAlt: 'stabintel',
+    url:
+      'https://play.google.com/store/apps/details?id=com.ekitiwatercorporation',
+    altUrl: ''
+  },
   {
     id: 7,
     name: 'Hackman Microfinance Bank',
