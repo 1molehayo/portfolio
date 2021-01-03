@@ -51,9 +51,9 @@ export const Navigation = ({ activeLink, toggleModal, toggleThemeSwitch }) => {
           <Nav className="ml-auto">
             {isMobile && (
               <NavItem>
-                <span className="nav-link" onClick={toggleModal}>
+                <NavLink className="nav-link" to="/">
                   Home
-                </span>
+                </NavLink>
               </NavItem>
             )}
 
