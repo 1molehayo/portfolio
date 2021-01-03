@@ -9,6 +9,7 @@ import artisanbutchery from 'assets/img//works/artisanbutchery.jpg';
 import summitech from 'assets/img//works/summitech.jpg';
 import flipeet from 'assets/img//works/flipeet.jpg';
 import remita from 'assets/img/works/remita.jpg';
+import iecc from 'assets/img//works/iecc.jpg';
 import corona from 'assets/img//works/corona.jpg';
 
 const projectData = [
@@ -133,18 +134,18 @@ const projectData = [
     url: 'https://www.behance.net/gallery/80661767/Flipeet-Book-App',
     altUrl: ''
   },
-  //   {
-  //     id: 11,
-  //     name: 'IECC Care',
-  //     category: ['UI/UX'],
-  //     stack: ['figma'],
-  //     description:
-  //       'IECC Care is a Premier Care Provider specialized in individualised personal care to meet service users holistic needs – physical, social and psychological wellbeing.',
-  //     image: iecc,
-  //     imageAlt: 'motomata',
-  //     url: 'https://www.behance.net/gallery/80661573/IECC-Mobile-App',
-  //     altUrl: ''
-  //   },
+  {
+    id: 11,
+    name: 'IECC Care',
+    category: ['UI/UX'],
+    stack: ['figma'],
+    description:
+      'IECC Care is a Premier Care Provider specialized in individualised personal care to meet service users holistic needs – physical, social and psychological wellbeing.',
+    image: iecc,
+    imageAlt: 'motomata',
+    url: 'https://www.behance.net/gallery/80661573/IECC-Mobile-App',
+    altUrl: ''
+  },
   {
     id: 12,
     name: 'Remita',
@@ -179,9 +180,8 @@ const projectData = [
     description:
       'A monitoring and tracking tool on the operation of certain field activities with valid reports and oversight of the field activities.',
     image: corona,
-    imageAlt: 'motomata',
-    url:
-      'https://www.figma.com/proto/HJodmY5mLaGjRWP1AtutxXFh/motomata?node-id=51%3A99&viewport=-98%2C359%2C0.262818&scaling=min-zoom',
+    imageAlt: 'corona',
+    url: 'http://corona-fe-qa.s3-website-eu-west-1.amazonaws.com/home',
     altUrl: ''
   }
 ];

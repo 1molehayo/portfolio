@@ -11,7 +11,11 @@ const Works = () => {
   };
 
   return (
-    <PageLayout showModal={showModal} toggleModal={toggleModal}>
+    <PageLayout
+      showModal={showModal}
+      toggleModal={toggleModal}
+      pageTitle="works"
+    >
       <section className="home">
         <div className="container">
           <div className="section">

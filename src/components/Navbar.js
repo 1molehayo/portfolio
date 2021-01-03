@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Nav, Navbar, NavItem, NavbarBrand } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import avatar from 'assets/img/myAvatar.png';
 
 export const Navigation = ({ activeLink, toggleModal, toggleThemeSwitch }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(prevState => !prevState);
+  };
+
   return (
     <div className="navigation">
-      <Navbar expand="md" variant="light">
-        <NavbarBrand href="/">
-          <div className="avatar">
+      <Navbar expand="md" variant="light" onToggle={toggleNav}>
+        <NavLink to="/" className="navbar-brand">
+          <span className="avatar">
             <img className="img-fluid" src={avatar} alt="avatar" />
-          </div>
-        </NavbarBrand>
+          </span>
+        </NavLink>
 
         <div className="mobile-icons">
           <div className="mobile-theme-switch" onClick={toggleThemeSwitch}>
             <i className="fas fa-adjust" />
           </div>
-          <Navbar.Toggle aria-controls="navbar-nav">
-            <i className="fa fa-bars" aria-hidden="true"></i>
+          <Navbar.Toggle
+            aria-controls="navbar-nav"
+            className={classnames('hamburger', { active: isOpen })}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </Navbar.Toggle>
         </div>
 
@@ -40,7 +51,7 @@ export const Navigation = ({ activeLink, toggleModal, toggleThemeSwitch }) => {
 
             <NavItem>
               <a className="nav-link" href="mailto:omilabuolusegun@gmail.com">
-                Contact
+                Say Hello
               </a>
             </NavItem>
 

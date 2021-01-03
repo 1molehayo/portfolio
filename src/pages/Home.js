@@ -3,6 +3,7 @@ import { Project } from 'components';
 import { PageLayout } from 'layouts/PageLayout';
 import ProjectData from 'utility/Project-data';
 import blog from 'assets/img/blog.png';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -13,7 +14,11 @@ const Home = () => {
   };
 
   return (
-    <PageLayout showModal={showModal} toggleModal={toggleModal}>
+    <PageLayout
+      showModal={showModal}
+      toggleModal={toggleModal}
+      pageTitle="home"
+    >
       <section className="home">
         <div className="container">
           <div className="section">
@@ -54,6 +59,18 @@ const Home = () => {
           {projects.map((project, index) => (
             <Project key={project.id} project={project} index={index} />
           ))}
+
+          <div className="text-center mb-4">
+            <div className="button-block">
+              <Link to="/works" className="button">
+                <span className="button-text">See more works</span>
+                <div className="button-mask" />
+                <span className="button-icon">
+                  <i className="fas fa-long-arrow-alt-right" />
+                </span>
+              </Link>
+            </div>
+          </div>
 
           <div className="section whatIDo">
             <div className="row">
