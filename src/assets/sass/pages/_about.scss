@@ -5,6 +5,7 @@
 
   position: relative;
   display: flex;
+  background-color: color(white);
 
   .close {
     position: absolute;
@@ -40,6 +41,7 @@
       width: 100%;
     }
 
+    flex: 0 0 50%;
     width: 50%;
   }
 
@@ -59,7 +61,7 @@
   &-right {
     display: flex;
     align-items: center;
-    margin: 1rem;
+    padding: 1rem;
 
     img {
       width: 100%;
