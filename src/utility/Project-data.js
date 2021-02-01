@@ -31,10 +31,10 @@ const projectData = [
     category: ['Web design'],
     stack: ['Angular', 'Sass', 'Ant design'],
     description:
-      'Remita is an all-in-one mobile app that allows you switch between your personal and corporate profiles on your device so you authorise payments quickly.',
+      'Aiico is a financial services group with market leading positions in its key business lines; insurance, pensions management, health maintenance and asset management',
     image: aiico,
-    imageAlt: 'remita',
-    url: 'https://www.aiicoplc.com/staging',
+    imageAlt: 'aiico',
+    url: 'https://www.aiicoplc.com/',
     altUrl: ''
   },
   {
@@ -57,7 +57,7 @@ const projectData = [
     description:
       'A luxury entertainment resort with cinema, hotel, restaurant and space booking',
     image: ebonylife,
-    imageAlt: 'remita',
+    imageAlt: 'ebonylife',
     url: 'https://ebonylifeplace.com/',
     altUrl: ''
   },
@@ -107,7 +107,7 @@ const projectData = [
     description:
       'A web application that helps manages insurance policy registration and renewal',
     image: artisanbutchery,
-    imageAlt: 'motomata',
+    imageAlt: 'artisanbutchery',
     url: 'https://www.theartisanbutchery.ng/',
     altUrl: ''
   },
@@ -119,7 +119,7 @@ const projectData = [
     description:
       'At Summitech, we’re daily changing the way companies engage with their consumers by applying user-centric product design practices that solve real problems.',
     image: summitech,
-    imageAlt: 'motomata',
+    imageAlt: 'summitech',
     url: 'https://summitech.ng/',
     altUrl: ''
   },
@@ -154,7 +154,7 @@ const projectData = [
     description:
       'Remita is an all-in-one mobile app that allows you switch between your personal and corporate profiles on your device so you authorise payments quickly.',
     image: remita,
-    imageAlt: 'motomata',
+    imageAlt: 'remita',
     url:
       'https://www.behance.net/gallery/80662637/Remita?tracking_source=project_owner_other_projects',
     altUrl: ''
