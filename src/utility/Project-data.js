@@ -6,7 +6,7 @@ import osp from 'assets/img//works/osp.jpg';
 import ekitiwater from 'assets/img//works/ekitiwater.jpg';
 import hmb from 'assets/img//works/hmb.jpg';
 import artisanbutchery from 'assets/img//works/artisanbutchery.jpg';
-import summitech from 'assets/img//works/summitech.jpg';
+import summitech from 'assets/img//works/summitech.png';
 import flipeet from 'assets/img//works/flipeet.jpg';
 import remita from 'assets/img/works/remita.jpg';
 import iecc from 'assets/img//works/iecc.jpg';
@@ -115,7 +115,7 @@ const projectData = [
     id: 9,
     name: 'Summitech Computing Ltd',
     category: ['Web design'],
-    stack: ['HTML', 'Sass', 'JQuery', 'Bootstrap'],
+    stack: ['React', 'Sass', 'GSAP', 'Bootstrap'],
     description:
       'At Summitech, we’re daily changing the way companies engage with their consumers by applying user-centric product design practices that solve real problems.',
     image: summitech,
@@ -167,7 +167,7 @@ const projectData = [
   //     description:
   //       'LoopMi offers to take out the hassle involved in communication and access management in communities by providing a centralized and transparent platform for all stakeholders involved',
   //     image: loopmi,
-  //     imageAlt: 'motomata',
+  //     imageAlt: 'loopmi',
   //     url: 'https://play.google.com/store/apps/details?id=com.antwire.loopmi',
   //     altUrl:
   //       'https://iphone.apkpure.com/loopmi/com.antwire.loopmi?utm_source=APKPure&utm_medium=down_link'

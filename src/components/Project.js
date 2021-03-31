@@ -97,7 +97,7 @@ export const Project = ({ project, index }) => {
             </div>
           </div>
           <div className="col-md-12 col-lg-8">
-            <div className="image">
+            <div className="project-image">
               <img
                 src={project.image || project1}
                 className="img-fluid"
