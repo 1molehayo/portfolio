@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-// import Preview from 'assets/img/preview-image.png';
+import ErrorImg from 'assets/img/error.svg';
 import { motion, useAnimation } from 'framer-motion';
 
 export const CustomImage = ({
@@ -62,7 +62,7 @@ export const CustomImage = ({
       </SkeletonTheme>
 
       <img
-        src={imageError ? 'Preview' : srcLarge || src}
+        src={imageError ? ErrorImg : srcLarge || src}
         alt={alt}
         role="presentation"
         className={className}
