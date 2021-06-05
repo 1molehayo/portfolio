@@ -149,7 +149,7 @@
 
   .mobile {
     &-icons {
-      @include respond(medium) {
+      @include respond(large) {
         display: flex;
         align-items: center;
       }

@@ -42,7 +42,7 @@
   }
 
   &-title {
-    @include respond(largest) {
+    @include respond(larger) {
       @include font-size(medium);
     }
 
@@ -58,7 +58,7 @@
   }
 
   &-category {
-    @include respond(largest) {
+    @include respond(larger) {
       @include font-size(x-small);
     }
 
@@ -71,7 +71,7 @@
   }
 
   &-description {
-    @include respond(largest) {
+    @include respond(larger) {
       @include font-size(regular-sm);
       line-height: 30px;
     }

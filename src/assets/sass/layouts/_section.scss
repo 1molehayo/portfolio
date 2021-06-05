@@ -1,5 +1,5 @@
 .section {
-  @include respond(largest) {
+  @include respond(larger) {
     padding: 2rem 0;
   }
 
@@ -10,7 +10,7 @@
   padding: 3rem 0;
 
   &--lg {
-    @include respond(largest) {
+    @include respond(larger) {
       padding: 3rem 0;
     }
 

@@ -36,7 +36,7 @@
     .image {
       &-block {
         display: block;
-        @include respond(largest) {
+        @include respond(larger) {
           display: none;
         }
       }
@@ -62,7 +62,7 @@
         &:nth-child(1) {
           margin-bottom: 3rem;
         }
-        @include respond(largest) {
+        @include respond(larger) {
           margin-bottom: 0 !important;
           margin-top: 2rem;
           &:nth-child(1) {
