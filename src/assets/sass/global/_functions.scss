@@ -38,3 +38,14 @@
 
   @return map-get($font-weights, $keyword);
 }
+
+// layout
+@function get-break-point($keyword) {
+  @if not map-has-key($break-points, $keyword) {
+    @error 'Unsupported `break-point` keyword `#{$keyword}`';
+
+    @return null;
+  }
+
+  @return map-get($break-points, $keyword);
+}

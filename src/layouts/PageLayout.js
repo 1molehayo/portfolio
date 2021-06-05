@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { ThemeContext } from 'contexts/ThemeContext';
 import { About } from 'components';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
-export const PageLayout = ({
-  pageClass,
-  children,
-  pageTitle,
-  showModal,
-  toggleModal
-}) => {
-  const [darkTheme, setDarkTheme] = useState(true);
-
-  const toggleThemeSwitch = () => {
-    setDarkTheme(prevState => !prevState);
-  };
+export const PageLayout = ({ pageClass, children }) => {
+  const { darkMode, showAboutModal, toggleAboutModal } = useContext(
+    ThemeContext
+  );
 
   return (
-    <div id="page" className={classnames('page', { page__light: !darkTheme })}>
-      <Header
-        pageTitle={pageTitle}
-        toggleModal={toggleModal}
-        toggleThemeSwitch={toggleThemeSwitch}
-      />
+    <div id="page" className={classnames('page', { page__light: !darkMode })}>
+      <Header />
 
-      <About showModal={showModal} modalFunc={toggleModal} />
+      <main className={classnames('page__body', pageClass)}>{children}</main>
 
-      <main className={classnames(pageClass)}>{children}</main>
+      <About showModal={showAboutModal} modalFunc={toggleAboutModal} />
 
       <Footer />
     </div>
@@ -37,8 +26,5 @@ export const PageLayout = ({
 
 PageLayout.propTypes = {
   children: PropTypes.node,
-  pageClass: PropTypes.string,
-  pageTitle: PropTypes.string,
-  showModal: PropTypes.bool,
-  toggleModal: PropTypes.func
+  pageClass: PropTypes.string
 };

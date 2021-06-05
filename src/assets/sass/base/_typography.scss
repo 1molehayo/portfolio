@@ -15,7 +15,7 @@
 
   &-text {
     @include respond(smaller) {
-      @include font-size(small);
+      @include font-size(regular);
     }
 
     @include font-size(large);
@@ -29,7 +29,7 @@
 
 .paragraph {
   @include respond(small) {
-    @include font-size(small);
+    @include font-size(regular-sm);
   }
 
   @include font-size(regular);

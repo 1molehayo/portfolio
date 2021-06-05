@@ -1,14 +1,12 @@
 import React from 'react';
-import { Project } from 'components';
 import { PageLayout } from 'layouts/PageLayout';
 import { motion } from 'framer-motion';
-import Projects from 'utility/Project-data';
-import { MetaDecorator } from 'components/MetaDecorator';
 import { ANIMATION_DEFAULTS } from 'utility/Settings';
+import { Link } from 'react-router-dom';
 
-const Works = () => {
+const NotFound = () => {
   return (
-    <PageLayout pageClass="works">
+    <PageLayout pageClass="error-page">
       <motion.div
         exit="out"
         initial="out"
@@ -16,24 +14,31 @@ const Works = () => {
         variants={ANIMATION_DEFAULTS.pageTransition}
         transition={ANIMATION_DEFAULTS.duration}
       >
-        <MetaDecorator title="Olusegun's Recent Works" />
-
-        <section className="home">
+        <section>
           <div className="container">
             <div className="section">
               <div className="row">
                 <div className="col">
                   <div className="heading">
                     <hr className="heading-line" />
-                    <h5 className="heading-text">My works</h5>
+                    <h5 className="heading-text">Page Not Found</h5>
                   </div>
                 </div>
               </div>
             </div>
 
-            {Projects.map((project, index) => (
-              <Project key={project.id} project={project} index={index} />
-            ))}
+            <div className="section text-center">
+              <h1>404</h1>
+              <p>The page you are looking for doesn&apos;t exist</p>
+
+              <Link to="/works" className="button mt-4">
+                <span className="button-text">Go home</span>
+                <div className="button-mask" />
+                <span className="button-icon">
+                  <i className="fas fa-long-arrow-alt-right" />
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
       </motion.div>
@@ -41,4 +46,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default NotFound;
