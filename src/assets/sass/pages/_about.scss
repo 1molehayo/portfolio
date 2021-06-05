@@ -37,7 +37,7 @@
   }
 
   &-half {
-    @include respond(largest) {
+    @include respond(larger) {
       flex: 0 0 100%;
       width: 100%;
     }

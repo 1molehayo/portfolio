@@ -21,7 +21,7 @@ const Home = () => {
         variants={ANIMATION_DEFAULTS.pageTransition}
         transition={ANIMATION_DEFAULTS.duration}
       >
-        <section className="home">
+        <section>
           <div className="container">
             <div className="section section--lg">
               <div className="row">
