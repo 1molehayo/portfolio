@@ -26,8 +26,26 @@ $font-sizes: (
   xx-small: 9px,
   x-small: 12px,
   small: 14px,
+  regular-sm: 16px,
   regular: 18px,
   medium: 20px,
   large: 30px,
   x-large: 35px
+);
+
+$break-points: (
+  // small devices
+    smallest: 320px,
+  // large mobile phones
+    smaller: 480px,
+  // small tabs or phablets
+    small: 600px,
+  // tabs and ipads
+    medium: 768px,
+  // large tabs / large ipads / small laptops
+    large: 990px,
+  // laptops / desktops
+    larger: 1200px,
+  // large devices
+    largest: 1440px
 );

@@ -11,7 +11,7 @@
   vertical-align: middle;
   text-align: center;
   text-transform: capitalize;
-  color: color(white);
+  color: color(white) !important;
   transition: color 0.3s;
   transition-property: color, background-color, transform;
 
@@ -92,7 +92,7 @@
 
   &-text {
     @include respond(smaller) {
-      @include font-size(small);
+      @include font-size(regular-sm);
       line-height: normal;
       letter-spacing: 0;
     }
@@ -127,7 +127,13 @@
     }
     padding: 12px 0;
     background-color: transparent;
-    color: color(primary);
+    color: color(primary) !important;
+
+    &:hover {
+      .button-text {
+        color: color(white);
+      }
+    }
 
     .button-icon {
       right: -40px;

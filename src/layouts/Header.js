@@ -1,21 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Navigation } from 'components';
 
-export const Header = ({ pageTitle, toggleModal, toggleThemeSwitch }) => (
+export const Header = () => (
   <header className="header">
-    <div className="container">
-      <Navigation
-        activeLink={pageTitle}
-        toggleModal={toggleModal}
-        toggleThemeSwitch={toggleThemeSwitch}
-      />
-    </div>
+    <Navigation />
   </header>
 );
-
-Header.propTypes = {
-  pageTitle: PropTypes.string,
-  toggleModal: PropTypes.func,
-  toggleThemeSwitch: PropTypes.func
-};

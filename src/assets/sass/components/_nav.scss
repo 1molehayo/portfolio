@@ -1,14 +1,10 @@
 .navigation {
+  @include respond(medium) {
+    padding: 0.5rem;
+  }
+
   .nav {
     &-item {
-      &.active .nav-link {
-        color: color(red) !important;
-      }
-
-      &:hover .nav-link {
-        color: color(red) !important;
-      }
-
       &:last-child {
         &:hover .nav-link {
           color: inherit !important;
@@ -25,13 +21,18 @@
       padding: 0 1rem !important;
       cursor: pointer;
       color: color(white) !important;
+      transition: color 0.5s ease 0s;
+
+      &:hover {
+        color: color(red) !important;
+      }
+
+      &.active {
+        color: color(red) !important;
+      }
     }
 
     &bar {
-      @include respond(medium) {
-        padding: 0.5rem;
-      }
-
       &-toggler {
         @include font-size(large);
         z-index: 30;

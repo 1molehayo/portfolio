@@ -1,0 +1,9 @@
+.error-page {
+  h1 {
+    @include respond(medium) {
+      font-size: 120px;
+    }
+
+    font-size: 200px;
+  }
+}

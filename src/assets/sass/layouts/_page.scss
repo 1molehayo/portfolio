@@ -3,6 +3,10 @@
   color: color(white);
   transition: background-color 0.25s;
 
+  &__body {
+    min-height: calc(100vh - 300px);
+  }
+
   &__light {
     background: color(light);
     color: color(primary);

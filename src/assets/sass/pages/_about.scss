@@ -38,6 +38,7 @@
 
   &-half {
     @include respond(largest) {
+      flex: 0 0 100%;
       width: 100%;
     }
 
@@ -53,7 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 3rem;
+    padding: 5rem 3rem;
     background: color(light);
     color: color(primary);
   }
