@@ -17,7 +17,7 @@ export const PageLayout = ({ pageClass, children }) => {
 
       <main className={classnames('page__body', pageClass)}>{children}</main>
 
-      <About showModal={showAboutModal} modalFunc={toggleAboutModal} />
+      <About showModal={showAboutModal} toggleModal={toggleAboutModal} />
 
       <Footer />
     </div>

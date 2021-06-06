@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Modal, ModalBody } from 'react-bootstrap';
 import olusegun from '../assets/img/olusegun.jpg';
+import { CustomImage } from './CustomImage';
 
-export const About = ({ showModal, modalFunc, className }) => {
+export const About = ({ showModal, toggleModal, className }) => {
   return (
     <Modal
       centered
       show={showModal}
-      onHide={modalFunc}
+      onHide={toggleModal}
       className={classnames(className)}
     >
       <ModalBody className="about">
-        <div className="close" onClick={modalFunc}>
+        <button className="close" onClick={toggleModal}>
           <i className="fas fa-times" />
-        </div>
+        </button>
+
         <div className="about-half about-left">
           <div className="heading about-heading">
             <hr className="heading-line" />
@@ -44,10 +46,23 @@ export const About = ({ showModal, modalFunc, className }) => {
           </p>
 
           <p className="paragraph">Actually for hire.</p>
+
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://drive.google.com/file/d/1VrVxGXrVvPiX5934TzogpwL6z3pUM8QZ/view?usp=sharing"
+            className="button mt-4"
+          >
+            <span className="button-text">Download Resume</span>
+            <div className="button-mask" />
+            <span className="button-icon">
+              <i className="fas fa-long-arrow-alt-right" />
+            </span>
+          </a>
         </div>
 
         <div className="about-half about-right">
-          <img src={olusegun} className="img-fluid" alt="olusegun" />
+          <CustomImage src={olusegun} className="img-fluid" alt="olusegun" />
         </div>
       </ModalBody>
     </Modal>
@@ -56,6 +71,6 @@ export const About = ({ showModal, modalFunc, className }) => {
 
 About.propTypes = {
   showModal: PropTypes.bool,
-  modalFunc: PropTypes.func,
+  toggleModal: PropTypes.func,
   className: PropTypes.string
 };
