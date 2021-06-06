@@ -35,13 +35,13 @@ const Home = () => {
                     do design.
                   </p>
                   <div className="button-block">
-                    <span className="button" onClick={toggleAboutModal}>
+                    <button className="button" onClick={toggleAboutModal}>
                       <span className="button-text">About Me</span>
                       <div className="button-mask" />
                       <span className="button-icon">
                         <i className="fas fa-long-arrow-alt-right" />
                       </span>
-                    </span>
+                    </button>
                   </div>
                 </div>
               </div>
