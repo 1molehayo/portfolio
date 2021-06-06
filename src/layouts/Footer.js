@@ -54,6 +54,14 @@ export const Footer = () => {
             className="footer-link"
             target="_blank"
             rel="noreferrer"
+            href="https://www.behance.net/onemole"
+          >
+            <i className="fab fa-behance" />
+          </a>
+          <a
+            className="footer-link"
+            target="_blank"
+            rel="noreferrer"
             href="https://drive.google.com/file/d/1VrVxGXrVvPiX5934TzogpwL6z3pUM8QZ/view?usp=sharing"
           >
             <i className="far fa-file-pdf" />
