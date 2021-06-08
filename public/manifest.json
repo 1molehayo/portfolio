@@ -1,6 +1,6 @@
 {
-  "short_name": "Olusegun Omilabu",
-  "name": "Olusegun Omilabu's Portfolio",
+  "short_name": "",
+  "name": "",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#021d44",
+  "theme_color": "#ff3e55",
   "background_color": "#021d44"
 }
