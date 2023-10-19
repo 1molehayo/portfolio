@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import avatar from 'assets/img/myAvatar.png';
+import avatar from 'assets/img/avatar.jpg';
 import useEventListener from 'services/useEventListener';
 import { ThemeContext } from 'contexts/ThemeContext';
 

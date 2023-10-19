@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CustomImage, Project } from 'components';
 import { PageLayout } from 'layouts/PageLayout';
 import { motion } from 'framer-motion';
@@ -10,7 +10,13 @@ import { ANIMATION_DEFAULTS } from 'utility/Settings';
 
 const Home = () => {
   const { toggleAboutModal } = useContext(ThemeContext);
-  const projects = ProjectData.slice(0, 3);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    if (ProjectData) {
+      setProjects([...ProjectData].reverse().slice(0, 3));
+    }
+  }, []);
 
   return (
     <PageLayout pageClass="home">

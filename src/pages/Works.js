@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Project } from 'components';
 import { PageLayout } from 'layouts/PageLayout';
 import { motion } from 'framer-motion';
-import Projects from 'utility/Project-data';
+import ProjectData from 'utility/Project-data';
 import { MetaDecorator } from 'components/MetaDecorator';
 import { ANIMATION_DEFAULTS } from 'utility/Settings';
 
 const Works = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    if (ProjectData) {
+      setProjects([...ProjectData].reverse());
+    }
+  }, []);
+
   return (
     <PageLayout pageClass="works">
       <motion.div
@@ -31,7 +39,7 @@ const Works = () => {
               </div>
             </div>
 
-            {Projects.map((project, index) => (
+            {projects.map((project, index) => (
               <Project key={project.id} project={project} index={index} />
             ))}
           </div>

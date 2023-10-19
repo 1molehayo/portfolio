@@ -50,8 +50,9 @@ export const About = ({ showModal, toggleModal, className }) => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1VrVxGXrVvPiX5934TzogpwL6z3pUM8QZ/view?usp=sharing"
+            href="/files/olusegun-omilabu-resume.pdf"
             className="button mt-4"
+            download
           >
             <span className="button-text">Download Resume</span>
             <div className="button-mask" />
