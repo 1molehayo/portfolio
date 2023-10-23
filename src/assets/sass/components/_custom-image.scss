@@ -20,10 +20,10 @@
   &-skeleton {
     z-index: 4;
     position: absolute;
-    top: -5px;
+    top: -9px;
     left: 0;
     width: 100%;
-    height: calc(100% + 3px);
+    height: calc(100% + 2px);
 
     .react-loading-skeleton {
       border-radius: 0;

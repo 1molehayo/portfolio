@@ -62,7 +62,7 @@ export const Footer = () => {
             className="footer-link"
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1VrVxGXrVvPiX5934TzogpwL6z3pUM8QZ/view?usp=sharing"
+            href="/files/olusegun-omilabu-resume.pdf"
           >
             <i className="far fa-file-pdf" />
           </a>

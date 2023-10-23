@@ -37,14 +37,14 @@ export const CustomImage = ({
         position: 'relative',
         height: height || 'auto',
         width: width || '100%',
-        minHeight: imageLoading ? '40rem' : 'auto'
+        minHeight: imageLoading ? '550px' : 'auto'
       }}
       className={containerClass}
     >
       <SkeletonTheme color="#eee" highlightColor="#235aa6">
         <motion.div
           className={classnames('custom-image-skeleton', {
-            minHeight: imageLoading ? '40rem' : 'auto'
+            minHeight: imageLoading ? '550px' : 'auto'
           })}
           animate={controls}
           initial="hidden"
