@@ -57,6 +57,8 @@ export const Project = ({ project, index }) => {
                     }
                     className="button button__secondary"
                     title={`${project.name} link`}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="button-text">view project</span>
                     <div className="button-mask" />
@@ -70,6 +72,8 @@ export const Project = ({ project, index }) => {
                       href={project.url}
                       className="button button__secondary mobile-app-button"
                       title={`${project.name} link`}
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       Play store
                       <i className="fab fa-google-play" />
@@ -78,6 +82,8 @@ export const Project = ({ project, index }) => {
                       href={project.altUrl}
                       className="button button__secondary mobile-app-button"
                       title={`${project.name} link`}
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       Apple store
                       <i className="fab fa-app-store-ios" />
@@ -88,6 +94,8 @@ export const Project = ({ project, index }) => {
                     href={project.url}
                     className="button button__secondary"
                     title={`${project.name} link`}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="button-text">view project</span>
                     <div className="button-mask" />
